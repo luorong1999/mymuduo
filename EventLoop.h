@@ -79,10 +79,10 @@ private:
     void printActiveChannels() const;
 
     std::atomic_bool looping_;  //原子操作，通过CAS实现的
-    std::atomic_bool quit_; // 标志退出loop循环
+    std::atomic_bool quit_;     // 标志退出loop循环
     std::atomic_bool eventHandling_;    // 表示是否在处理事件
     
-    const pid_t threadId_;  //记录当前线loop所在的线程
+    const pid_t threadId_;  //记录当前loop所在的线程
     Timestamp pollReturnTime_; //poller返回发生事件的channels的时间点
 
     std::unique_ptr<Poller> poller_;

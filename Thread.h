@@ -40,11 +40,11 @@ private:
     bool start_;
     bool joined_;
 
-    std::shared_ptr<std::thread> thread_;
-    pid_t tid_;
-    ThreadFunc func_;
+    std::shared_ptr<std::thread> thread_; // 线程的抽象
+    ThreadFunc func_; // 线程绑定的执行函数
     
-    std::string name_;
+    std::string name_;  // 线程名
+    pid_t tid_; // 线程号
     static std::atomic_int32_t numCreated_; // 记录总的创建线程的数量
 
     CountDownLatch latch_;

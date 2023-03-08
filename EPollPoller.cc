@@ -10,11 +10,11 @@
 
 using namespace mymuduo;
 
-//channel未添加到poller中
-const int kNew = -1;    //channel的成员index = -1
-//channel已添加
+// channel没有添加到poller中，刚初始化的channel的成员index = -1
+const int kNew = -1;
+// channel添加到poller中
 const int kAdded = 1;
-//channel从poller中删除
+// channel从poller中删除
 const int kDeleted = 2;
 
 EPollPoller::EPollPoller(EventLoop *loop)
@@ -34,11 +34,7 @@ EPollPoller::~EPollPoller()
 }
 
 // channel update => EventLoop updateChannel => Poller updateChannel
-/*
-        EventLoop
-    ChannelList     Poller
-                    ChannelMap <fd, channel*>
-*/
+// 底层都是通过EPollPoller::update函数执行事件注册的逻辑
 void EPollPoller::updateChannel(Channel *channel)
 {
     // Poller::assertInLoopThread();
@@ -85,6 +81,7 @@ void EPollPoller::removeChannel(Channel *channel)
     channel->set_index(kNew);
 }
 
+// IO多路复用文件描述符监听
 Timestamp EPollPoller::poll(int timeoutMs, ChannelList *activateChannels)
 {
     // 应当使用LOG_DEBUG
@@ -118,7 +115,7 @@ Timestamp EPollPoller::poll(int timeoutMs, ChannelList *activateChannels)
     }
 }
 
-// 填写活跃的连接
+// 填充有就绪事件发生的 channel
 void EPollPoller::fillActiveChannels(int numEvents, ChannelList *activeChannels) const
 {
     for(int i = 0; i < numEvents; ++i)
@@ -129,7 +126,7 @@ void EPollPoller::fillActiveChannels(int numEvents, ChannelList *activeChannels)
     }
 }
 
-// 更新channel通道
+// 根据channel通道执行对应文件描述符的事件注册逻辑
 void EPollPoller::update(int operation, Channel *channel)
 {
     struct epoll_event event;

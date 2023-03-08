@@ -1,0 +1,3 @@
+/Users/bytedance/go/src/shixi/mymuduo/cmake-build-debug/CMakeFiles/mymuduo.dir
+/Users/bytedance/go/src/shixi/mymuduo/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/bytedance/go/src/shixi/mymuduo/cmake-build-debug/CMakeFiles/rebuild_cache.dir

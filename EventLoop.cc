@@ -136,7 +136,7 @@ void EventLoop::quit()
     }
 }
 
-//在当前loop中执行cb
+// 在EventLoop对应的io线程中执行cb
 void EventLoop::runInLoop(Functor cb)
 {
     if(isInLoopThread())    // 在当前的loop线程中执行cb
@@ -155,8 +155,9 @@ void EventLoop::queueInLoop(Functor cb)
         std::unique_lock<std::mutex> lock(mutex_);
         pendingFunctors_.emplace_back(std::move(cb));
     }
-    //唤醒响应的，需要执行上面回调操作的loop的线程
-    //|| callingPendingFunctors_的意思是： 当前loop正在执行回调，但是loop又有了新的回调，为防止结束回调后又阻塞在poll
+    // 唤醒响应的，需要执行上面回调操作的loop的线程
+    // callingPendingFunctors_的作用是： 如果调用queueInLoop和EventLoop在同一个线程，且callingPendingFunctors_为false时，
+    // 则说明此时在执行事件处理逻辑，尚未执行到doPendingFunctors()，即使不用wakeup，也可以在之后照旧执行doPendingFunctors()了，减少对eventfd的io读写
     if(!isInLoopThread() || callingPendingFunctors_)
     {
         wakeup(); //唤醒loop所在线程

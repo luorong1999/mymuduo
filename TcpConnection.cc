@@ -163,7 +163,6 @@ void TcpConnection::send(const std::string& buf)
 /*
 发送数据  应用写的快， 而内核发送数据慢， 需要把待发送数据放入缓冲区，设置水位回调
 */
-
 void TcpConnection::sendInLoop(const void* data, size_t len)
 {
     ssize_t nwrote = 0;
@@ -223,8 +222,7 @@ void TcpConnection::sendInLoop(const void* data, size_t len)
     }
 }
 
-
-//连接建立
+// 连接建立注册可读事件，并执行用户给的回调
 void TcpConnection::connectEstablished()
 {
     setState(kConnected);
@@ -234,6 +232,7 @@ void TcpConnection::connectEstablished()
     // 新连接建立，执行用户给的回调
     connectionCallback_(shared_from_this());
 }
+
 // 连接销毁(关闭连接的最后一步)
 void TcpConnection::connectDestroyed()
 {

@@ -1,0 +1,336 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: my_muduo
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/bytedance/go/src/shixi/mymuduo/cmake-build-debug/
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target mymuduo
+
+
+#############################################
+# Order-only phony target for mymuduo
+
+build cmake_object_order_depends_target_mymuduo: phony || CMakeFiles/mymuduo.dir
+
+build CMakeFiles/mymuduo.dir/Acceptor.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/Acceptor.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/Acceptor.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/AsyncLogging.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/AsyncLogging.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/AsyncLogging.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/Buffer.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/Buffer.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/Buffer.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/Channel.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/Channel.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/Channel.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/CoutDownLatch.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/CoutDownLatch.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/CoutDownLatch.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/CurrentThread.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/CurrentThread.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/CurrentThread.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/DefaultPoller.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/DefaultPoller.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/DefaultPoller.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/EPollPoller.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/EPollPoller.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/EPollPoller.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/EventLoop.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/EventLoop.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/EventLoop.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/EventLoopThread.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/EventLoopThread.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/EventLoopThread.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/EventLoopThreadPool.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/EventLoopThreadPool.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/EventLoopThreadPool.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/InetAddress.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/InetAddress.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/InetAddress.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/Logger.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/Logger.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/Logger.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/Poller.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/Poller.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/Poller.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/Socket.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/Socket.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/Socket.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/TcpConnection.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/TcpConnection.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/TcpConnection.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/TcpServer.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/TcpServer.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/TcpServer.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/Thread.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/Thread.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/Thread.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/Timer.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/Timer.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/Timer.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/TimerQueue.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/TimerQueue.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/TimerQueue.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+build CMakeFiles/mymuduo.dir/Timestamp.o: CXX_COMPILER__mymuduo_Debug /Users/bytedance/go/src/shixi/mymuduo/Timestamp.cc || cmake_object_order_depends_target_mymuduo
+  DEFINES = -Dmymuduo_EXPORTS
+  DEP_FILE = CMakeFiles/mymuduo.dir/Timestamp.o.d
+  FLAGS = -g -std=c++17 -fPIC -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  OBJECT_FILE_DIR = CMakeFiles/mymuduo.dir
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target mymuduo
+
+
+#############################################
+# Link the shared library ../lib/libmymuduo.dylib
+
+build ../lib/libmymuduo.dylib: CXX_SHARED_LIBRARY_LINKER__mymuduo_Debug CMakeFiles/mymuduo.dir/Acceptor.o CMakeFiles/mymuduo.dir/AsyncLogging.o CMakeFiles/mymuduo.dir/Buffer.o CMakeFiles/mymuduo.dir/Channel.o CMakeFiles/mymuduo.dir/CoutDownLatch.o CMakeFiles/mymuduo.dir/CurrentThread.o CMakeFiles/mymuduo.dir/DefaultPoller.o CMakeFiles/mymuduo.dir/EPollPoller.o CMakeFiles/mymuduo.dir/EventLoop.o CMakeFiles/mymuduo.dir/EventLoopThread.o CMakeFiles/mymuduo.dir/EventLoopThreadPool.o CMakeFiles/mymuduo.dir/InetAddress.o CMakeFiles/mymuduo.dir/Logger.o CMakeFiles/mymuduo.dir/Poller.o CMakeFiles/mymuduo.dir/Socket.o CMakeFiles/mymuduo.dir/TcpConnection.o CMakeFiles/mymuduo.dir/TcpServer.o CMakeFiles/mymuduo.dir/Thread.o CMakeFiles/mymuduo.dir/Timer.o CMakeFiles/mymuduo.dir/TimerQueue.o CMakeFiles/mymuduo.dir/Timestamp.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  INSTALLNAME_DIR = /Users/bytedance/go/src/shixi/mymuduo/lib/
+  LANGUAGE_COMPILE_FLAGS = -g -std=c++17 -fPIC -g
+  OBJECT_DIR = CMakeFiles/mymuduo.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = libmymuduo.dylib
+  SONAME_FLAG = -install_name
+  TARGET_COMPILE_PDB = CMakeFiles/mymuduo.dir/
+  TARGET_FILE = ../lib/libmymuduo.dylib
+  TARGET_PDB = ../lib/libmymuduo.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/bytedance/go/src/shixi/mymuduo/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/bytedance/go/src/shixi/mymuduo/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/bytedance/go/src/shixi/mymuduo -B/Users/bytedance/go/src/shixi/mymuduo/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+build libmymuduo.dylib: phony ../lib/libmymuduo.dylib
+
+build mymuduo: phony ../lib/libmymuduo.dylib
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/bytedance/go/src/shixi/mymuduo/cmake-build-debug
+
+build all: phony ../lib/libmymuduo.dylib
+
+# =============================================================================
+# Unknown Build Time Dependencies.
+# Tell Ninja that they may appear as side effects of build rules
+# otherwise ordered by order-only dependencies.
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeTestCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeTestCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

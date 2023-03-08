@@ -13,7 +13,7 @@ namespace mymuduo
 class EventLoop;  //前置声明类，在.cc中再包含，这样用户使用此.h的没有那么多包含
 
 // 理解为通道， 封装了sockfd和其感兴趣的event，如EPOLLIN、EPOLLOUT
-//还绑定了 poller返回的具体事件
+// 还绑定了 poller返回的具体事件
 class Channel : public noncopyable
 {
 public:
@@ -44,13 +44,13 @@ public:
     int events() const { return events_; }
     int  set_revents(int revt){ revents_ = revt; }
 
-    // 设置fd相应的事件状态
+    // 设置fd相应的感兴趣事件
     void enableReading() { events_ |= kReadEvent; update(); }
     void disableReading() { events_ &= ~kReadEvent; update(); }
     void enableWriting() { events_ |= kWriteEvent; update(); }
     void disableWriting() { events_ &= ~kWriteEvent; update(); }
     void disableAll() { events_ = kNoneEvent; update(); }
-    // 返回fd当前的事件状态
+    // 返回fd当前的感兴趣事件
     bool isNoneEvent() const { return events_ == kNoneEvent; }
     bool isReading() const { return events_ & kReadEvent; }
     bool isWriting() const { return events_ & kWriteEvent; }
@@ -72,14 +72,16 @@ private:
     static const int kWriteEvent;
 
     EventLoop *loop_;   //事件循环
-    const int fd_;   // fd, Poller监听的对象
+    const int fd_;  // fd, Poller监听的对象
     int events_;    // 注册fd感兴趣的事件
-    int revents_;  // poller返回的事件
-    int index_;
+    int revents_;   // poller返回的事件
+    int index_;     // 标识 channel 有没有添加到 EventLoop 的 poller 里面
     bool eventHandling_; //标志着是否正在处理事件，防止析构一个正在处理事件的Channel
-    bool addedToLoop_;  // 标志着Channel是否在Loop的ChannelLists，也即是否被添加
+    bool addedToLoop_;   // 标志着Channel是否在Loop的ChannelLists，也即是否被添加
 
-    std::weak_ptr<void> tie_;   // removeChannel时使用
+    // removeChannel时使用，防止TcpConnection析构了，
+    // 执行的Channel::handleEvent，将其提升为共享指针，防止崩溃
+    std::weak_ptr<void> tie_;
     bool tied_;
 
     // 因为channel通道里面能获知fd的事件revent，所以要具体注册回调事件
