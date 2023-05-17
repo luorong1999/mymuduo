@@ -95,7 +95,7 @@ private:
     bool reading_;
 
     std::unique_ptr<Socket> socket_;
-    std::unique_ptr<Channel> channel_;
+    std::unique_ptr<Channel> channel_; // 连接关闭时需要将Channel从io线程对应的poller中移除
     
     const InetAddress localAddr_;
     const InetAddress peerAddr_;
@@ -103,13 +103,13 @@ private:
     ConnectionCallback connectionCallback_; //有新连接时的回调
     MessageCallback messageCallback_;   //有读写消息时的回调
     WriteCompleteCallback writeCompleteCallback_;   //消息发送完成以后的回调
-    CloseCallback closeCallback_; 
+    CloseCallback closeCallback_;  // 连接关闭回调函数
     HighWaterMarkCallback highWaterMarkCallback_;
     size_t highWaterMark_;
 
     Buffer inputBuffer_;    //接受数据的缓冲区
     Buffer outputBuffer_;   //发送数据的缓冲区
-    std::any context_;
+    std::any context_;  // 用户自定义的一些上下文数据
 };
 
 }

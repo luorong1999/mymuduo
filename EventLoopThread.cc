@@ -33,6 +33,7 @@ EventLoop* EventLoopThread::startLoop()
     // 启动底层的新线程，执行当前的threadfunc
     thread_.start();
 
+    // 利用条件变量获取io线程的EventLoop
     EventLoop *loop = nullptr;
     {
         std::unique_lock<std::mutex> lock(mutex_);
@@ -51,6 +52,7 @@ void EventLoopThread::threadFunc()
     // 创建一个独立的eventloop，和上面的线程是一一对应的，one loop per thread
     EventLoop loop;
 
+    // 由用户设置的线程执行创建eventloop之后的回调函数
     if(callback_)
     {
         callback_(&loop);
@@ -62,6 +64,7 @@ void EventLoopThread::threadFunc()
         cond_.notify_one();
     }
 
+    // 开启每个io线程的事件循环
     loop.loop();    // Event loop => Poller.poll
 
     std::lock_guard<std::mutex> lock(mutex_);

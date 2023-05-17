@@ -38,7 +38,9 @@ private:
 
     using EventList = std::vector<struct epoll_event>;
 
+    // epoll 对应的文件描述符
     int epollfd_;
+    // 有就绪事件的文件描述符 epoll_event
     EventList events_;
 };
 

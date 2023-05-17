@@ -38,6 +38,7 @@ public:
                 Option option = kNoReusePort);
     ~TcpServer();
 
+    // 以下未被调用的皆为用户设置的事件驱动回调函数
     void setThreadInitCallback(const ThreadInitCallback& cb) { threadInitCallback_ = cb; }
     void setConnectionCallback(const ConnectionCallback& cb) { connectionCallback_ = cb; }
     void setMessageCallback(const MessageCallback& cb) { messageCallback_ = cb; }
@@ -69,14 +70,14 @@ private:
     std::unique_ptr<Acceptor> acceptor_;    //运行在mainloop， 任务是监听连接事件
     std::shared_ptr<EventLoopThreadPool> threadPool_;   // one loop per thread
 
-    ConnectionCallback connectionCallback_; //有新连接时的回调
-    MessageCallback messageCallback_;   //有读写消息时的回调
-    WriteCompleteCallback writeCompleteCallback_;   //消息发送完成以后的回调
-
+    ConnectionCallback connectionCallback_; // 新连接建立之后的回调
+    MessageCallback messageCallback_;   // 业务逻辑处理的回调
+    WriteCompleteCallback writeCompleteCallback_;  //消息发送完成以后的回调
     ThreadInitCallback threadInitCallback_; //线程初始化回调
-    std::atomic_int32_t started_;
 
-    int nextConnId_;
+    std::atomic_int32_t started_;  // 原子变量，防止一个TcpServer对象被启动多次
+
+    int nextConnId_;  // 用于拼接出每个连接TcpConnection的名字
     ConnectionMap connections_; //保存所有的连接
 };
 

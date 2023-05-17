@@ -39,7 +39,7 @@ protected:
     using ChannelMap = std::unordered_map<int, Channel*>;
     ChannelMap channels_;
 private:
-    EventLoop *ownerLoop_;  // Poller所属的Loop
+    EventLoop *ownerLoop_;  // Poller所属的EventLoop
 
 };
 

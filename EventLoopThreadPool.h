@@ -44,6 +44,9 @@ private:
     bool started_;
     int numThreads_;
     int next_;
+
+    // threads_目的在于使用unique_ptr管理线程池中EventLoopThread，无需手动释放
+    // io线程池析构时会退出事件循环以及结束线程
     std::vector<std::unique_ptr<EventLoopThread>> threads_;
     std::vector<EventLoop*> loops_;
 
